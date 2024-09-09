@@ -23,3 +23,6 @@ inst/doc
 # Raw data ----
 data-raw/raw/
 data-raw/processed/
+
+# Package sticker ----
+inst/package-sticker/
