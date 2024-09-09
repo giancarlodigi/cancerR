@@ -12,7 +12,6 @@ Check](https://github.com/giancarlodigi/cancerR/actions/workflows/R-CMD-check.ya
 [![Website](https://github.com/giancarlodigi/cancerR/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/giancarlodigi/cancerR/actions/workflows/pkgdown.yaml)
 [![Test
 coverage](https://github.com/giancarlodigi/cancerR/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/giancarlodigi/cancerR/actions/workflows/test-coverage.yaml)
-[![codecov](https://codecov.io/gh/giancarlodigi/cancerR/branch/master/graph/badge.svg)](https://codecov.io/gh/giancarlodigi/cancerR)
 [![License: GPL (\>=
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 [![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -119,8 +118,7 @@ Please cite `cancerR` as:
 ## Contributing
 
 All types of contributions are encouraged and valued. For more
-information, check out our [Contributor
-Guidelines](https://github.com/giancarlodigi/cancerR/blob/main/CONTRIBUTING.md).
+information, please reach out to the maintainer of the package.
 
 Please note that the `cancerR` project is released with a [Contributor
 Code of
