@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # cancerR <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/>
@@ -12,7 +13,7 @@ Check](https://github.com/giancarlodigi/cancerR/actions/workflows/R-CMD-check.ya
 [![Test
 coverage](https://github.com/giancarlodigi/cancerR/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/giancarlodigi/cancerR/actions/workflows/test-coverage.yaml)
 [![codecov](https://codecov.io/gh/giancarlodigi/cancerR/branch/master/graph/badge.svg)](https://codecov.io/gh/giancarlodigi/cancerR)
-[![License: GPL (&gt;=
+[![License: GPL (\>=
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 [![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Project Status:
@@ -46,17 +47,21 @@ The main purpose of `cancerR` is to… **{{ DESCRIBE THE MAIN FEATURES
 You can install the development version from
 [GitHub](https://github.com/) with:
 
-    ## Install < remotes > package (if not already installed) ----
-    if (!requireNamespace("remotes", quietly = TRUE)) {
-      install.packages("remotes")
-    }
+``` r
+## Install < remotes > package (if not already installed) ----
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
 
-    ## Install < cancerR > from GitHub ----
-    remotes::install_github("giancarlodigi/cancerR")
+## Install < cancerR > from GitHub ----
+remotes::install_github("giancarlodigi/cancerR")
+```
 
 Then you can attach the package `cancerR`:
 
-    library("cancerR")
+``` r
+library("cancerR")
+```
 
 ## Get started
 
@@ -69,10 +74,10 @@ vignette.
 `cancerR` provides **{{ NUMBER OF VIGNETTES }}** vignettes to learn more
 about the package:
 
--   the [Get
-    started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
-    vignette describes the core features of the package
--   **{{ LIST ADDITIONAL VIGNETTES }}**
+- the [Get
+  started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
+  vignette describes the core features of the package
+- **{{ LIST ADDITIONAL VIGNETTES }}**
 
 ## Citation
 
