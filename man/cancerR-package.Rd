@@ -4,9 +4,9 @@
 \name{cancerR-package}
 \alias{cancerR}
 \alias{cancerR-package}
-\title{cancerR: The Title of the Project}
+\title{cancerR: Classification of Cancer Using Administrative Data}
 \description{
-A paragraph providing a full description of the project (on several lines...)
+Classifies the type of cancer using routinely collected data commonly found in cancer registries from pathology reports. The package implements the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3) and the World Health Organization (WHO) classification of tumors. Information on the site (topography), histology (morphology), and behaviour of neoplasms are used to classify the type of cancer.
 }
 \seealso{
 Useful links:
