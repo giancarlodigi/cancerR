@@ -19,3 +19,7 @@
 # User-specific files ----
 README.html
 inst/doc
+
+# Raw data ----
+data-raw/raw/
+data-raw/processed/
