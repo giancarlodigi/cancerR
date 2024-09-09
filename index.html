@@ -69,22 +69,31 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="cancerr-">cancerR <img src="reference/figures/package-sticker.png" align="right" style="float:right; height:120px;"><a class="anchor" aria-label="anchor" href="#cancerr-"></a>
+<div class="page-header"><h1 id="cancerr-">cancerR <!-- <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/> -->
+<a class="anchor" aria-label="anchor" href="#cancerr-"></a>
 </h1></div>
 <!-- badges: start -->
 
 <p align="left">
-• <a href="#overview">Overview</a><br> • <a href="#features">Features</a><br> • <a href="#installation">Installation</a><br> • <a href="#get-started">Get started</a><br> • <a href="#long-form-documentations">Long-form documentations</a><br> • <a href="#citation">Citation</a><br> • <a href="#contributing">Contributing</a><br> • <a href="#acknowledgments">Acknowledgments</a><br> • <a href="#references">References</a>
+• <a href="#overview">Overview</a><br> • <a href="#features">Features</a><br> • <a href="#installation">Installation</a><br> • <a href="#get-started">Get started</a><br> • <a href="#vignettes">Vignettes</a><br> • <a href="#upcoming-features">Upcoming features</a><br> • <a href="#citation">Citation</a><br> • <a href="#contributing">Contributing</a><br> • <a href="#references">References</a>
 </p>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>The R package <code>cancerR</code>… <strong>{{ DESCRIBE YOUR PACKAGE }}</strong></p>
+<p><code>cancerR</code> is designed to use administrative data to classify different cancer subtypes using data commonly collected by cancer registries. This package is meant for researchers and data scientists who work with cancer data and need to classify the type of cancer using the information available in pathology reports which have been coded using the <a href="https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology" class="external-link">International Classification of Diseases for Oncology (ICD-O)</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
 </h2>
-<p>The main purpose of <code>cancerR</code> is to… <strong>{{ DESCRIBE THE MAIN FEATURES }}</strong></p>
+<p>The main purpose of <code>cancerR</code> is to use information gathered using the standardized collection system of the <a href="https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology" class="external-link">ICD-O</a> classification system of tumors to classify the type of cancer. Depending on the age of the patient, users of the package can classify the type of cancer according to</p>
+<p>The package provides functionality to:</p>
+<ul>
+<li>convert and validate tumor site (a.k.a. topography) codes</li>
+<li>classify childhood cancer according to the <a href="https://doi.org/10.1002/cncr.20910" class="external-link">International Classification of Childhood Cancer</a>
+</li>
+<li>assign adolescent and young adult cancers using the <a href="https://seer.cancer.gov/ayarecode/" class="external-link">AYA Site</a> from the Social, Epidemiology, and End Results (SEER) program or the published <a href="https://doi.org/10.1002/cncr.33041" class="external-link">AYA classification by Barr et al</a>
+</li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -108,12 +117,21 @@
 <p>For an overview of the main features of <code>cancerR</code>, please read the <a href="https://giancarlodigi.github.io/cancerR/articles/cancerR.html" class="external-link">Get started</a> vignette.</p>
 </div>
 <div class="section level2">
-<h2 id="long-form-documentations">Long-form documentations<a class="anchor" aria-label="anchor" href="#long-form-documentations"></a>
+<h2 id="vignettes">Vignettes<a class="anchor" aria-label="anchor" href="#vignettes"></a>
 </h2>
-<p><code>cancerR</code> provides <strong>{{ NUMBER OF VIGNETTES }}</strong> vignettes to learn more about the package:</p>
+<p><code>cancerR</code> provides vignettes to learn more about the package:</p>
 <ul>
-<li>the <a href="https://giancarlodigi.github.io/cancerR/articles/cancerR.html" class="external-link">Get started</a> vignette describes the core features of the package</li>
-<li><strong>{{ LIST ADDITIONAL VIGNETTES }}</strong></li>
+<li>the <a href="https://giancarlodigi.github.io/cancerR/articles/cancerR.html" class="external-link">Get started</a> vignette describes the basic functionality of the package</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="upcoming-features">Upcoming features<a class="anchor" aria-label="anchor" href="#upcoming-features"></a>
+</h2>
+<p>The package is under active development and planning to add the following features:</p>
+<ul>
+<li>adult cancer classification according to the <a href="https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology" class="external-link">ICD-O</a>
+</li>
+<li>implementing conversion and classification of cancers using ICD-O-2 codes</li>
 </ul>
 </div>
 <div class="section level2">
@@ -121,7 +139,7 @@
 </h2>
 <p>Please cite <code>cancerR</code> as:</p>
 <blockquote>
-<p>Di Giuseppe Giancarlo (2024) cancerR: An R package to <strong>{{ TITLE }}</strong>. R package version 0.0.0.9000. <a href="https://github.com/giancarlodigi/cancerR/" class="external-link uri">https://github.com/giancarlodigi/cancerR/</a></p>
+<p>Di Giuseppe Giancarlo (2024) cancerR: An R package to classify cancer using administrative data. R package version 0.0.0.9000. <a href="https://github.com/giancarlodigi/cancerR/" class="external-link uri">https://github.com/giancarlodigi/cancerR/</a></p>
 </blockquote>
 </div>
 <div class="section level2">
@@ -131,14 +149,12 @@
 <p>Please note that the <code>cancerR</code> project is released with a <a href="https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 <div class="section level2">
-<h2 id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
-</h2>
-<p><strong>{{ OPTIONAL SECTION }}</strong></p>
-</div>
-<div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<p><strong>{{ OPTIONAL SECTION }}</strong></p>
+<p>Barr RD, Ries LAG, Trama A, et al. A system for classifying cancers diagnosed in adolescents and young adults. Cancer. 2020;126(21):4634-4659. doi: <a href="https://doi.org/10.1002/cncr.33041" class="external-link">10.1002/cncr.33041</a>.</p>
+<p>Steliarova-Foucher E, Stiller C, Lacour B, Kaatsch P. International Classification of Childhood Cancer, third edition. Cancer. 2005;103(7):1457-1467. doi: <a href="https://doi.org/10.1002/cncr.20910" class="external-link">10.1002/cncr.20910</a>.</p>
+<p>National Cancer Institute. Surveillance, Epidemiology, and End Results Program. Adolescent and Young Adult Site Recode ICD-O-3/WHO 2008. 2021. Available <a href="https://seer.cancer.gov/ayarecode/" class="external-link">here</a>.</p>
+<p>World Health Organization. International Classification of Diseases for Oncology (ICD-O) - 3rd Edition, 1st Revision; 2013. Document manual found <a href="https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf" class="external-link">here</a></p>
 </div>
 </div>
   </div>
