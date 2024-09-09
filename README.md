@@ -58,7 +58,7 @@ The package provides functionality to:
   Classification of Childhood
   Cancer](https://doi.org/10.1002/cncr.20910)
 - assign adolescent and young adult cancers using the [AYA
-  Site](https://seer.cancer.gov/ayarecode/) from the Social,
+  Site](https://seer.cancer.gov/ayarecode/) from the Surveillance,
   Epidemiology, and End Results (SEER) program or the published [AYA
   classification by Barr et al](https://doi.org/10.1002/cncr.33041)
 
