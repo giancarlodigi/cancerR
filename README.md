@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cancerR <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/>
+# cancerR <!-- <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/> -->
 
 <!-- badges: start -->
 
@@ -26,21 +26,42 @@ WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.o
 <a href="#features">Features</a><br> •
 <a href="#installation">Installation</a><br> •
 <a href="#get-started">Get started</a><br> •
-<a href="#long-form-documentations">Long-form documentations</a><br> •
+<a href="#vignettes">Vignettes</a><br> •
+<a href="#upcoming-features">Upcoming features</a><br> •
 <a href="#citation">Citation</a><br> •
 <a href="#contributing">Contributing</a><br> •
-<a href="#acknowledgments">Acknowledgments</a><br> •
 <a href="#references">References</a>
 </p>
 
 ## Overview
 
-The R package `cancerR`… **{{ DESCRIBE YOUR PACKAGE }}**
+`cancerR` is designed to use administrative data to classify different
+cancer subtypes using data commonly collected by cancer registries. This
+package is meant for researchers and data scientists who work with
+cancer data and need to classify the type of cancer using the
+information available in pathology reports which have been coded using
+the [International Classification of Diseases for Oncology
+(ICD-O)](https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology).
 
 ## Features
 
-The main purpose of `cancerR` is to… **{{ DESCRIBE THE MAIN FEATURES
-}}**
+The main purpose of `cancerR` is to use information gathered using the
+standardized collection system of the
+[ICD-O](https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology)
+classification system of tumors to classify the type of cancer.
+Depending on the age of the patient, users of the package can classify
+the type of cancer according to
+
+The package provides functionality to:
+
+- convert and validate tumor site (a.k.a. topography) codes
+- classify childhood cancer according to the [International
+  Classification of Childhood
+  Cancer](https://doi.org/10.1002/cncr.20910)
+- assign adolescent and young adult cancers using the [AYA
+  Site](https://seer.cancer.gov/ayarecode/) from the Social,
+  Epidemiology, and End Results (SEER) program or the published [AYA
+  classification by Barr et al](https://doi.org/10.1002/cncr.33041)
 
 ## Installation
 
@@ -69,22 +90,30 @@ For an overview of the main features of `cancerR`, please read the [Get
 started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
 vignette.
 
-## Long-form documentations
+## Vignettes
 
-`cancerR` provides **{{ NUMBER OF VIGNETTES }}** vignettes to learn more
-about the package:
+`cancerR` provides vignettes to learn more about the package:
 
 - the [Get
   started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
-  vignette describes the core features of the package
-- **{{ LIST ADDITIONAL VIGNETTES }}**
+  vignette describes the basic functionality of the package
+
+## Upcoming features
+
+The package is under active development and planning to add the
+following features:
+
+- adult cancer classification according to the
+  [ICD-O](https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology)
+- implementing conversion and classification of cancers using ICD-O-2
+  codes
 
 ## Citation
 
 Please cite `cancerR` as:
 
-> Di Giuseppe Giancarlo (2024) cancerR: An R package to **{{ TITLE }}**.
-> R package version 0.0.0.9000.
+> Di Giuseppe Giancarlo (2024) cancerR: An R package to classify cancer
+> using administrative data. R package version 0.0.0.9000.
 > <https://github.com/giancarlodigi/cancerR/>
 
 ## Contributing
@@ -98,10 +127,23 @@ Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
-## Acknowledgments
-
-**{{ OPTIONAL SECTION }}**
-
 ## References
 
-**{{ OPTIONAL SECTION }}**
+Barr RD, Ries LAG, Trama A, et al. A system for classifying cancers
+diagnosed in adolescents and young adults. Cancer.
+2020;126(21):4634-4659. doi:
+[10.1002/cncr.33041](https://doi.org/10.1002/cncr.33041).
+
+Steliarova-Foucher E, Stiller C, Lacour B, Kaatsch P. International
+Classification of Childhood Cancer, third edition. Cancer.
+2005;103(7):1457-1467. doi:
+[10.1002/cncr.20910](https://doi.org/10.1002/cncr.20910).
+
+National Cancer Institute. Surveillance, Epidemiology, and End Results
+Program. Adolescent and Young Adult Site Recode ICD-O-3/WHO 2008. 2021.
+Available [here](https://seer.cancer.gov/ayarecode/).
+
+World Health Organization. International Classification of Diseases for
+Oncology (ICD-O) - 3rd Edition, 1st Revision; 2013. Document manual
+found
+[here](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf)
