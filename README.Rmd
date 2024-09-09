@@ -134,7 +134,7 @@ package to classify cancer using administrative data. R package version 0.0.0.90
 ## Contributing
 
 All types of contributions are encouraged and valued. For more information, 
-check out our [Contributor Guidelines](https://github.com/giancarlodigi/cancerR/blob/main/CONTRIBUTING.md).
+please reach out to the maintainer of the package.
 
 Please note that the `cancerR` project is released with a 
 [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). 

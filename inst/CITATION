@@ -2,7 +2,7 @@ citHeader("To cite cancerR in publications use:")
 
 bibentry(
   bibtype = "Manual",
-  title   = "cancerR: {An} {R} package to ...",
+  title   = "cancerR: {An} {R} package to classify cancer using health data",
   author  = c(person("Di Giuseppe Giancarlo")),
   year    = "2024",
   note    = "R package version 0.0.0.9000",

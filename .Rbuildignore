@@ -10,3 +10,4 @@
 ^_pkgdown\.yaml$
 ^CITATION\.cff$
 ^data-raw$
+^dev$

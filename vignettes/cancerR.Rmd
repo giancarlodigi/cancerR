@@ -79,7 +79,7 @@ arguments specified below:
 
 - `"Barr 2020"` (**default**) - Classification based on the AYA classification by [Barr et al](https://doi.org/10.1002/cncr.33041)
 - `"SEER 2020"` - [S.E.E.R. 2020 Recode Revision](https://seer.cancer.gov/ayarecode/aya-2020.html)
-- `"SEER-WHO v2008"` - [S.E.E.R. WHO 2008](https://seer.cancer.gov/ayarecode/aya-who-2008.html)
+- `"SEER-WHO v2008"` - [S.E.E.R. WHO 2008](https://seer.cancer.gov/ayarecode/aya-who2008.html)
 - `"SEER v2006"` - [S.E.E.R. 2006](https://seer.cancer.gov/ayarecode/ayarecode-orig.html)
 
 
