@@ -7,9 +7,14 @@ cff-version: 1.2.0
 message: 'To cite package "cancerR" in publications use:'
 type: software
 license: GPL-2.0-or-later
-title: 'cancerR: The Title of the Project'
+title: 'cancerR: Classification of Cancer Using Administrative Data'
 version: 0.0.0.9000
-abstract: A paragraph providing a full description of the project (on several lines...)
+abstract: Classifies the type of cancer using routinely collected data commonly found
+  in cancer registries from pathology reports. The package implements the International
+  Classification of Diseases for Oncology, 3rd Edition (ICD-O-3) and the World Health
+  Organization (WHO) classification of tumors. Information on the site (topography),
+  histology (morphology), and behaviour of neoplasms are used to classify the type
+  of cancer.
 authors:
 - family-names: Di Giuseppe
   given-names: Giancarlo
@@ -101,4 +106,15 @@ references:
   year: '2024'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
+- type: software
+  title: 'R: A Language and Environment for Statistical Computing'
+  notes: Depends
+  url: https://www.R-project.org/
+  authors:
+  - name: R Core Team
+  institution:
+    name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2024'
+  version: '>= 2.10'
 
