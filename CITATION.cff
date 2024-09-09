@@ -22,7 +22,7 @@ authors:
   orcid: https://orcid.org/0000-0001-5112-7560
 preferred-citation:
   type: manual
-  title: 'cancerR: An R package to ...'
+  title: 'cancerR: An R package to classify cancer using health data'
   authors:
   - name: Di Giuseppe Giancarlo
   year: '2024'
@@ -36,6 +36,17 @@ contact:
   email: digi.giancarlo@proton.me
   orcid: https://orcid.org/0000-0001-5112-7560
 references:
+- type: software
+  title: 'R: A Language and Environment for Statistical Computing'
+  notes: Depends
+  url: https://www.R-project.org/
+  authors:
+  - name: R Core Team
+  institution:
+    name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2024'
+  version: '>= 2.10'
 - type: software
   title: knitr
   abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
@@ -106,15 +117,4 @@ references:
   year: '2024'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  institution:
-    name: R Foundation for Statistical Computing
-    address: Vienna, Austria
-  year: '2024'
-  version: '>= 2.10'
 
