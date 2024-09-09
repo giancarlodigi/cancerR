@@ -11,3 +11,6 @@
 ^CITATION\.cff$
 ^data-raw$
 ^dev$
+^doc$
+^Meta$
+^cran-comments\.md$

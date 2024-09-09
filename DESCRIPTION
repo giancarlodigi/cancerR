@@ -1,10 +1,13 @@
 Type: Package
 Package: cancerR
 Title: Classification of Cancer Using Administrative Data
-Version: 0.0.0.9000
-Authors@R: 
-    person("Giancarlo", "Di Giuseppe", , "digi.giancarlo@proton.me", role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0000-0001-5112-7560"))
+Version: 0.1.0
+Authors@R: c(
+    person(given   = "Giancarlo",
+           family  = "Di Giuseppe",
+           role    = c("aut", "cre", "cph"),
+           email   = "digi.giancarlo@proton.me",
+           comment = c(ORCID = "0000-0001-5112-7560")))
 Description: Classifies the type of cancer using routinely collected data
     commonly found in cancer registries from pathology reports. The
     package implements the International Classification of Diseases for

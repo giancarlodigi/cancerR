@@ -26,3 +26,5 @@ data-raw/processed/
 
 # Package sticker ----
 inst/package-sticker/
+/doc/
+/Meta/

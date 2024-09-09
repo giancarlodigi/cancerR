@@ -1,5 +1,5 @@
 ---
-title: "Geting started with cancerR"
+title: "Getting started with cancerR"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Get started}
@@ -71,7 +71,7 @@ site_convert("C99.9", validate = FALSE) # Should return 999
 
 # Classify adolescent and young adult cancers
 
-The `aya_class()` function can be used to classify adolescent and yound adult 
+The `aya_class()` function can be used to classify adolescent and young adult 
 cancer based on the histology, site, and behaviour codes of the cancer.
 
 The method used for the classification can be specified using one of the `method` 
