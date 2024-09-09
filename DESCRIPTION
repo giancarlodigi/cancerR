@@ -1,6 +1,6 @@
 Package: cancerR
 Type: Package
-Title: The Title of the Project
+Title: Classification of Cancer Using Administrative Data
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Giancarlo",
@@ -8,8 +8,12 @@ Authors@R: c(
            role    = c("aut", "cre", "cph"),
            email   = "digi.giancarlo@proton.me",
            comment = c(ORCID = "0000-0001-5112-7560")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
+Description: Classifies the type of cancer using routinely collected data commonly
+    found in cancer registries from pathology reports. The package implements the
+    International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3)
+    and the World Health Organization (WHO) classification of tumors. Information 
+    on the site (topography), histology (morphology), and behaviour of neoplasms
+    are used to classify the type of cancer.
 URL: https://github.com/giancarlodigi/cancerR
 BugReports: https://github.com/giancarlodigi/cancerR/issues
 License: GPL (>= 2)
@@ -22,3 +26,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
