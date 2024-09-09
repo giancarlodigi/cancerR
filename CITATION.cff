@@ -8,7 +8,7 @@ message: 'To cite package "cancerR" in publications use:'
 type: software
 license: GPL-2.0-or-later
 title: 'cancerR: Classification of Cancer Using Administrative Data'
-version: 0.0.0.9000
+version: 0.1.0
 abstract: Classifies the type of cancer using routinely collected data commonly found
   in cancer registries from pathology reports. The package implements the International
   Classification of Diseases for Oncology, 3rd Edition (ICD-O-3) and the World Health
