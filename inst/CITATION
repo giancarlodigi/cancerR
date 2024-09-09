@@ -1,0 +1,10 @@
+citHeader("To cite cancerR in publications use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "cancerR: {An} {R} package to ...",
+  author  = c(person("Di Giuseppe Giancarlo")),
+  year    = "2024",
+  note    = "R package version 0.0.0.9000",
+  url     = "https://github.com/giancarlodigi/cancerR"
+)

@@ -1,0 +1,24 @@
+Package: cancerR
+Type: Package
+Title: The Title of the Project
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given   = "Giancarlo",
+           family  = "Di Giuseppe",
+           role    = c("aut", "cre", "cph"),
+           email   = "digi.giancarlo@proton.me",
+           comment = c(ORCID = "0000-0001-5112-7560")))
+Description: A paragraph providing a full description of the project (on 
+    several lines...)
+URL: https://github.com/giancarlodigi/cancerR
+BugReports: https://github.com/giancarlodigi/cancerR/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
