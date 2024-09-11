@@ -21,8 +21,9 @@ test_that("invalid depth throws an error", {
 })
 
 # Expect a console print that no match was found
-test_that("no match found prints message or returns NA", {
-  expect_output(aya_class(9383, "8000", "3", method = "Barr 2020", depth = 3), "No match found at index:  1")
-  expect_output(aya_class("9999", 800, "3", method = "SEER v2020", depth = 2), "No match found at index:  1")
+test_that("no match found prints message (if verbose=TRUE) and returns NA", {
+  expect_message(aya_class(9383, "8000", "3", method = "Barr 2020", depth = 3, verbose = TRUE), "No match found at index: 1")
+  expect_true(is.na(aya_class(9383, "8000", "3", method = "Barr 2020", depth = 3)))
+  expect_message(aya_class("9999", 800, "3", method = "SEER v2020", depth = 2, verbose = TRUE), "No match found at index: 1")
   expect_true(is.na(aya_class("9999", 800, "3", method = "SEER v2020", depth = 2)))
 })

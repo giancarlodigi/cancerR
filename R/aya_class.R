@@ -12,10 +12,13 @@
 #' @param site Site (aka topography) code of the cancer.
 #' @param behaviour Behaviour code of the cancer.
 #' @param method Method used for the diagnosis classification of the cancer.
-#' Default is "SEER 2020". Can be one of "Barr 2020", "SEER v2006",
-#' "SEER v2020", "SEER-WHO v2008".
+#'    Default is \code{"Barr 2020"}. 
+#'    Can be one of \code{"Barr 2020"}, \code{"SEER v2006"},
+#'    \code{"SEER v2020"}, \code{"SEER-WHO v2008"}.
 #' @param depth Depth level of the classification hierarchy to be determined.
-#' If set to `99`, will return the SEER grouping.
+#'    If set to \code{99}, will return the SEER grouping.
+#' @param verbose Logical value to print messages to the console if unable to 
+#'    classify or duplicates found. Default is \code{FALSE}.
 #'
 #' @return
 #' Returns the diagnostic classification of the cancer based on the specified
@@ -33,7 +36,7 @@
 #'
 #' # Third position in the classification hierarchy
 #' aya_class(9020, "C50.1", "3", method = "Barr 2020", depth = 3)
-aya_class <- function(histology, site, behaviour, method = "Barr 2020", depth = 1) {
+aya_class <- function(histology, site, behaviour, method = "Barr 2020", depth = 1, verbose = FALSE) {
   # Assuming 'method' variable holds the method type
   if (!method %in% c("Barr 2020", "SEER v2006", "SEER v2020", "SEER-WHO v2008")) {
     stop("Invalid method specified, needs to be one of 'Barr 2020', 'SEER v2006', 'SEER v2020', 'SEER-WHO v2008'")
@@ -78,15 +81,18 @@ aya_class <- function(histology, site, behaviour, method = "Barr 2020", depth = 
   error_none <- determine_errors(positions, "none")
   error_mult <- determine_errors(positions, "mult")
 
-  if (!is.null(error_none)) {
-    cat("No match found at index: ", paste(error_none, collapse = ", "), "\n")
-  }
-  if (!is.null(error_mult)) {
-    cat(
-      "Duplicate matches found at index: ",
-      paste(error_mult, collapse = ", "),
-      "\n"
-    )
+  # Print messages to the console if verbose is set to TRUE
+  if (verbose) {
+    if (!is.null(error_none)) {
+      message("No match found at index: ", paste(error_none, collapse = ", "), "\n")
+    }
+    if (!is.null(error_mult)) {
+      message(
+        "Duplicate matches found at index: ",
+        paste(error_mult, collapse = ", "),
+        "\n"
+      )
+    }
   }
 
   # Get the diagnostic levels from the lookup table based on the depth specified

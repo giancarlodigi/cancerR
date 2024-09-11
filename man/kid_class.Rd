@@ -4,7 +4,7 @@
 \alias{kid_class}
 \title{Classification of childhood cancer.}
 \usage{
-kid_class(histology, site, method = "iccc3", depth = 1)
+kid_class(histology, site, method = "iccc3", depth = 1, verbose = FALSE)
 }
 \arguments{
 \item{histology}{Histology code of the cancer.}
@@ -15,7 +15,11 @@ kid_class(histology, site, method = "iccc3", depth = 1)
 Default is \code{"iccc3"}.
 Can be one of \code{"iccc3"}, \code{"who-iccc3"}, \code{"iarc2017"}.}
 
-\item{depth}{Depth level of the classification hierarchy to be determined.}
+\item{depth}{Depth level of the classification hierarchy to be determined.
+If set to \code{99}, will return the SEER grouping.}
+
+\item{verbose}{Logical value to print messages to the console if unable to
+classify or duplicates found. Default is \code{FALSE}.}
 }
 \value{
 Returns the diagnostic classification of the childhood cancer based on the specified

@@ -4,7 +4,14 @@
 \alias{aya_class}
 \title{Adolescent and young adult cancer classification}
 \usage{
-aya_class(histology, site, behaviour, method = "Barr 2020", depth = 1)
+aya_class(
+  histology,
+  site,
+  behaviour,
+  method = "Barr 2020",
+  depth = 1,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{histology}{Histology code of the cancer.}
@@ -14,11 +21,15 @@ aya_class(histology, site, behaviour, method = "Barr 2020", depth = 1)
 \item{behaviour}{Behaviour code of the cancer.}
 
 \item{method}{Method used for the diagnosis classification of the cancer.
-Default is "SEER 2020". Can be one of "Barr 2020", "SEER v2006",
-"SEER v2020", "SEER-WHO v2008".}
+Default is \code{"Barr 2020"}.
+Can be one of \code{"Barr 2020"}, \code{"SEER v2006"},
+\code{"SEER v2020"}, \code{"SEER-WHO v2008"}.}
 
 \item{depth}{Depth level of the classification hierarchy to be determined.
 If set to \code{99}, will return the SEER grouping.}
+
+\item{verbose}{Logical value to print messages to the console if unable to
+classify or duplicates found. Default is \code{FALSE}.}
 }
 \value{
 Returns the diagnostic classification of the cancer based on the specified
