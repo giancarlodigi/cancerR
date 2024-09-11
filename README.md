@@ -24,8 +24,7 @@ WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.o
 • <a href="#overview">Overview</a><br> •
 <a href="#features">Features</a><br> •
 <a href="#installation">Installation</a><br> •
-<a href="#get-started">Get started</a><br> •
-<a href="#vignettes">Vignettes</a><br> •
+<a href="#getting-started">Get started</a><br> •
 <a href="#upcoming-features">Upcoming features</a><br> •
 <a href="#citation">Citation</a><br> •
 <a href="#contributing">Contributing</a><br> •
@@ -83,19 +82,12 @@ Then you can attach the package `cancerR`:
 library("cancerR")
 ```
 
-## Get started
+## Getting started
 
 For an overview of the main features of `cancerR`, please read the [Get
 started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
-vignette.
-
-## Vignettes
-
-`cancerR` provides vignettes to learn more about the package:
-
-- the [Get
-  started](https://giancarlodigi.github.io/cancerR/articles/cancerR.html)
-  vignette describes the basic functionality of the package
+vignette. This vignette provides a brief introduction to the package and
+its implementation for classifying cancer using administrative data.
 
 ## Upcoming features
 
@@ -112,7 +104,7 @@ following features:
 Please cite `cancerR` as:
 
 > Di Giuseppe Giancarlo (2024) cancerR: An R package to classify cancer
-> using administrative data. R package version 0.0.0.9000.
+> using administrative data. R package version 0.1.0.
 > <https://github.com/giancarlodigi/cancerR/>
 
 ## Contributing
