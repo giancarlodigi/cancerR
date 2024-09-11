@@ -6,7 +6,7 @@
 \alias{cancerR-package}
 \title{cancerR: Classification of Cancer Using Administrative Data}
 \description{
-Classifies the type of cancer using routinely collected data commonly found in cancer registries from pathology reports. The package implements the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3) and the World Health Organization (WHO) classification of tumors. Information on the site (topography), histology (morphology), and behaviour of neoplasms are used to classify the type of cancer.
+Classifies the type of cancer using routinely collected data commonly found in cancer registries from pathology reports. The package implements the International Classification of Diseases for Oncology, 3rd Edition site (topography), histology (morphology), and behaviour codes of neoplasms to classify cancer type \url{https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology}. Classification in children utilize the International Classification of Childhood Cancer by Steliarova-Foucher et al. (2005) \doi{10.1002/cncr.20910}. Adolescent and young adult cancer classification is based on Barr et al. (2020) \doi{10.1002/cncr.33041}.
 }
 \seealso{
 Useful links:

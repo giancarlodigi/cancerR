@@ -125,7 +125,7 @@ The package is under active development and planning to add the following featur
 Please cite `cancerR` as: 
 
 > Di Giuseppe Giancarlo (`r format(Sys.Date(), "%Y")`) cancerR: An R 
-package to classify cancer using administrative data. R package version 0.0.0.9000. 
+package to classify cancer using administrative data. R package version 0.1.0. 
 <https://github.com/giancarlodigi/cancerR/>
 
 

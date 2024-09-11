@@ -136,7 +136,9 @@ find_match_index <- function(results, expected_length) {
 #' Determine errors in a vector
 #'
 #' @description
-#' This function determines the positions of errors in a given vector based on the specified type.
+#' This function determines the positions of errors (no match or duplicates) in a given vector 
+#' based on the specified error type. The input `x` is a the numeric vector
+#' ouput by the \code{find_match_index()} function.
 #'
 #' @param x A numeric vector to check for errors.
 #' @param type A character string specifying the type of error to check for.
