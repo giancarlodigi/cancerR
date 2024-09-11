@@ -66,7 +66,14 @@ to be determined.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">aya_class</span><span class="op">(</span><span class="va">histology</span>, <span class="va">site</span>, <span class="va">behaviour</span>, method <span class="op">=</span> <span class="st">"Barr 2020"</span>, depth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">aya_class</span><span class="op">(</span></span>
+<span>  <span class="va">histology</span>,</span>
+<span>  <span class="va">site</span>,</span>
+<span>  <span class="va">behaviour</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"Barr 2020"</span>,</span>
+<span>  depth <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -87,13 +94,19 @@ to be determined.</p>
 
 <dt id="arg-method">method<a class="anchor" aria-label="anchor" href="#arg-method"></a></dt>
 <dd><p>Method used for the diagnosis classification of the cancer.
-Default is "SEER 2020". Can be one of "Barr 2020", "SEER v2006",
-"SEER v2020", "SEER-WHO v2008".</p></dd>
+Default is <code>"Barr 2020"</code>.
+Can be one of <code>"Barr 2020"</code>, <code>"SEER v2006"</code>,
+<code>"SEER v2020"</code>, <code>"SEER-WHO v2008"</code>.</p></dd>
 
 
 <dt id="arg-depth">depth<a class="anchor" aria-label="anchor" href="#arg-depth"></a></dt>
 <dd><p>Depth level of the classification hierarchy to be determined.
 If set to <code>99</code>, will return the SEER grouping.</p></dd>
+
+
+<dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
+<dd><p>Logical value to print messages to the console if unable to
+classify or duplicates found. Default is <code>FALSE</code>.</p></dd>
 
 </dl></div>
     <div id="value">

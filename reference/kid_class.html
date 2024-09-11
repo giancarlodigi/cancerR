@@ -64,7 +64,7 @@ to be determined.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">kid_class</span><span class="op">(</span><span class="va">histology</span>, <span class="va">site</span>, method <span class="op">=</span> <span class="st">"iccc3"</span>, depth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">kid_class</span><span class="op">(</span><span class="va">histology</span>, <span class="va">site</span>, method <span class="op">=</span> <span class="st">"iccc3"</span>, depth <span class="op">=</span> <span class="fl">1</span>, verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -86,7 +86,13 @@ Can be one of <code>"iccc3"</code>, <code>"who-iccc3"</code>, <code>"iarc2017"</
 
 
 <dt id="arg-depth">depth<a class="anchor" aria-label="anchor" href="#arg-depth"></a></dt>
-<dd><p>Depth level of the classification hierarchy to be determined.</p></dd>
+<dd><p>Depth level of the classification hierarchy to be determined.
+If set to <code>99</code>, will return the SEER grouping.</p></dd>
+
+
+<dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
+<dd><p>Logical value to print messages to the console if unable to
+classify or duplicates found. Default is <code>FALSE</code>.</p></dd>
 
 </dl></div>
     <div id="value">
