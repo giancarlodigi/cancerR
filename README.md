@@ -63,7 +63,15 @@ The package provides functionality to:
 
 ## Installation
 
-You can install the development version from
+You can install the released version of `cancerR` from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+## Install < cancerR > from CRAN ----
+install.packages("cancerR")
+```
+
+or you can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
