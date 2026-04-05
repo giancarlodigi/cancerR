@@ -9,6 +9,9 @@ type: software
 license: GPL-2.0-or-later
 title: 'cancerR: Classification of Cancer Using Administrative Data'
 version: 0.1.1
+identifiers:
+- type: doi
+  value: 10.32614/CRAN.package.cancerR
 abstract: Classifies the type of cancer using routinely collected data commonly found
   in cancer registries from pathology reports. The package implements the International
   Classification of Diseases for Oncology, 3rd Edition site (topography), histology
@@ -28,8 +31,9 @@ preferred-citation:
   authors:
   - name: Di Giuseppe Giancarlo
   year: '2024'
-  notes: R package version 0.0.0.9000
+  notes: R package version 0.1.1
   url: https://github.com/giancarlodigi/cancerR
+repository: https://CRAN.R-project.org/package=cancerR
 repository-code: https://github.com/giancarlodigi/cancerR
 url: https://github.com/giancarlodigi/cancerR
 contact:
@@ -47,7 +51,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2024'
+  year: '2026'
   version: '>= 2.10'
 - type: software
   title: knitr
@@ -60,7 +64,7 @@ references:
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2024'
+  year: '2026'
   doi: 10.32614/CRAN.package.knitr
 - type: software
   title: rmarkdown
@@ -104,7 +108,7 @@ references:
     given-names: Richard
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2024'
+  year: '2026'
   doi: 10.32614/CRAN.package.rmarkdown
 - type: software
   title: testthat
@@ -116,7 +120,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2024'
+  year: '2026'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
 
