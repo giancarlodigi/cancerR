@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">cancerR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
       </span>
     </div>
 
@@ -51,6 +51,20 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="0.1.1" id="cancerr-011">cancerR 0.1.1<a class="anchor" aria-label="anchor" href="#cancerr-011"></a></h2>
+<div class="section level3">
+<h3 id="bug-fixes-0-1-1">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-1-1"></a></h3>
+<ul><li>Fixed a critical regex bug in <code><a href="../reference/site_convert.html">site_convert()</a></code> that prevented correct conversion of ICD-O-3 topography codes with decimals.</li>
+<li>Improved robustness of <code><a href="../reference/aya_class.html">aya_class()</a></code> and <code><a href="../reference/kid_class.html">kid_class()</a></code> by ensuring <code><a href="../reference/site_convert.html">site_convert()</a></code> is always applied to the <code>site</code> input, allowing both numeric and character formats to work reliably.</li>
+<li>Fixed a typo in the error message for input length validation in <code><a href="../reference/kid_class.html">kid_class()</a></code>.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="architectural-changes-0-1-1">Architectural changes<a class="anchor" aria-label="anchor" href="#architectural-changes-0-1-1"></a></h3>
+<ul><li>Refactored shared classification logic between <code><a href="../reference/aya_class.html">aya_class()</a></code> and <code><a href="../reference/kid_class.html">kid_class()</a></code> into an internal helper function <code>classify_internal()</code> to improve maintainability and reduce code duplication.</li>
+<li>Replaced brittle magic numbers in matching logic with internal constants <code>ERR_NONE</code> and <code>ERR_MULT</code>.</li>
+</ul></div>
+</div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="0.1.0" id="cancerr-010">cancerR 0.1.0<small>2024-09-15</small><a class="anchor" aria-label="anchor" href="#cancerr-010"></a></h2>
 <div class="section level3">
 <h3 id="initial-package-release-0-1-0">Initial package release<a class="anchor" aria-label="anchor" href="#initial-package-release-0-1-0"></a></h3>
@@ -71,7 +85,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>
