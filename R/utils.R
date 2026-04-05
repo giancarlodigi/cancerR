@@ -62,6 +62,10 @@ search_lookup <- function(look_vect, x_vect) {
   sapply(look_vect, function(y) x_vect %in% y)
 }
 
+# Internal constants for error handling in match indices
+ERR_NONE <- 1234567890
+ERR_MULT <- 0987654321
+
 #' Find Match Index
 #'
 #' @description
@@ -74,8 +78,8 @@ search_lookup <- function(look_vect, x_vect) {
 #' @return An integer vector of indices. The vector will contain:
 #' \itemize{
 #'   \item The row index of the lookup table corresponding to the row number in the input data.
-#'   \item \code{1234567890} for no match.
-#'   \item \code{0987654321} for multiple matches.
+#'   \item `ERR_NONE` (1234567890) for no match.
+#'   \item `ERR_MULT` (0987654321) for multiple matches.
 #' }
 #' @noRd
 find_match_index <- function(results, expected_length) {
@@ -120,14 +124,14 @@ find_match_index <- function(results, expected_length) {
   idx[pos_df$col] <- pos_df$row
 
   # Add identifiers to the index vector where there was
-  # - 1234567890 = no match
-  # - 0987654321 = multiple matches
+  # - ERR_NONE = no match
+  # - ERR_MULT = multiple matches
   if (!is.null(idx_none)) {
-    idx[idx_none] <- 1234567890
+    idx[idx_none] <- ERR_NONE
   }
 
   if (!is.null(idx_mult)) {
-    idx[idx_mult] <- 0987654321
+    idx[idx_mult] <- ERR_MULT
   }
 
   return(idx)
@@ -166,9 +170,9 @@ find_match_index <- function(results, expected_length) {
 determine_errors <- function(x, type) {
 
   if (type == "none") {
-    pos <- which(x == 1234567890)
+    pos <- which(x == ERR_NONE)
   } else if (type == "mult") {
-    pos <- which(x == 0987654321)
+    pos <- which(x == ERR_MULT)
   }
 
   if (length(pos) > 0) {
@@ -179,7 +183,84 @@ determine_errors <- function(x, type) {
 }
 
 
-#' Validate the depth for the lookup table
+#' Internal classification function
+#'
+#' @description
+#' This function performs the core classification logic shared by `aya_class`
+#' and `kid_class`.
+#'
+#' @param histology Histology code of the cancer.
+#' @param site Site (aka topography) code of the cancer.
+#' @param behaviour Behaviour code of the cancer (optional).
+#' @param lookup_table The lookup table for the specified method.
+#' @param depth Depth level of the classification hierarchy.
+#' @param verbose Logical value to print messages to the console.
+#'
+#' @return Returns the diagnostic classification.
+#' @noRd
+classify_internal <- function(histology, site, behaviour = NULL, lookup_table, depth, verbose) {
+  # Input length validation
+  if (is.null(behaviour)) {
+    if (length(histology) != length(site)) {
+      stop("Length of histology and site columns should be the same")
+    }
+  } else {
+    if (length(histology) != length(site) | length(histology) != length(behaviour)) {
+      stop("Length of histology, site, and behaviour columns should be the same")
+    }
+  }
+
+  # Length of the input data
+  LEN <- length(histology)
+
+  # Check formats of the input data
+  # Don't force valid ICD-O-3 site codes
+  site <- site_convert(site, validate = FALSE)
+
+  # Perform search lookup for each dimension
+  search_results <- list(
+    hist = search_lookup(lookup_table[["hist"]], histology),
+    site = search_lookup(lookup_table[["site"]], site)
+  )
+
+  if (!is.null(behaviour)) {
+    search_results$behav <- search_lookup(lookup_table[["behav"]], behaviour)
+  }
+
+  # Combine results using matrix multiplication (intersection)
+  results <- Reduce("*", search_results)
+  results <- t(results)
+
+  # Find position in the lookup table index
+  positions <- find_match_index(results, LEN)
+
+  # Check for errors and print them to the console
+  error_none <- determine_errors(positions, "none")
+  error_mult <- determine_errors(positions, "mult")
+
+  # Print messages to the console if verbose is set to TRUE
+  if (verbose) {
+    if (!is.null(error_none)) {
+      message("No match found at index: ", paste(error_none, collapse = ", "), "\n")
+    }
+    if (!is.null(error_mult)) {
+      message(
+        "Duplicate matches found at index: ",
+        paste(error_mult, collapse = ", "),
+        "\n"
+      )
+    }
+  }
+
+  # Get the diagnostic levels from the lookup table based on the depth specified
+  if (depth == 99) {
+    type <- lookup_table$seer_grp[positions]
+  } else {
+    type <- lookup_table[[paste0("pos_", depth)]][positions]
+  }
+
+  return(type)
+}
 #'
 #' @description
 #' This function validates the depth parameter for classification. The depth parameter

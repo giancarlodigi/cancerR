@@ -16,7 +16,7 @@ test_that("kid_class throws error for invalid depth", {
 
 test_that("kid_class throws error for mismatched lengths of histology and site", {
   expect_error(kid_class(c("8970", "8980"), "C22.0", method = "iccc3", depth = 1), 
-               "Length of histology and columns should be the same")
+               "Length of histology and site columns should be the same")
 })
 
 test_that("kid_class handles no match found", {

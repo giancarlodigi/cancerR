@@ -1,7 +1,7 @@
 Type: Package
 Package: cancerR
 Title: Classification of Cancer Using Administrative Data
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given   = "Giancarlo",
            family  = "Di Giuseppe",
@@ -29,4 +29,4 @@ VignetteBuilder:
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3

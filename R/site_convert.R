@@ -10,7 +10,7 @@
 #' have valid ICD-O-3 sites codes between C00.0 and C97.0, setting any invalid
 #' codes to `NA`. Default value is `TRUE`.
 #'
-#' @return Returns a converted ICD-O-3 topography code in a numeric format.
+#' @return Returns a converted ICD-O-3 topography code in an integer format.
 #'
 #' @details
 #' Takes in a character or numeric vector of ICD-O-3 site codes and converts
@@ -46,15 +46,15 @@ site_convert <- function(x, validate = TRUE) {
   }
 
   x <- ifelse(
-    grepl("\\d{1-2}\\.\\d{1}$", x),
+    grepl("^\\d{1,2}\\.\\d{1}$", x),
     as.numeric(x) * 10,
     ifelse(
-      grepl("\\d{3}", x) & !grepl("\\.", x),
+      grepl("^\\d{3}$", x) & !grepl("\\.", x),
       as.numeric(x),
       ifelse(
-        grepl("\\d{2}", x) & !grepl("\\.", x),
+        grepl("^\\d{2}$", x) & !grepl("\\.", x),
         as.numeric(x) * 10,
-        NA_real_
+        as.numeric(x)
       )
     )
   )

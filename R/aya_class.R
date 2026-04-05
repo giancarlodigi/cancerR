@@ -48,59 +48,11 @@ aya_class <- function(histology, site, behaviour, method = "Barr 2020", depth = 
   # Check max depth
   validate_depth(lookup_table, depth)
 
-  # Length of histology, site, and behaviour columns should be the same
-  if (length(histology) != length(site) | length(histology) != length(behaviour)) {
-    stop("Length of histology, site, and behaviour columns should be the same")
-  }
-
   # Check if the SEER grouping is available for the specified method
   if (depth == 99 && method == "Barr 2020") {
     stop("SEER grouping is not available for Barr 2020 method")
   }
 
-  # Length of the input data
-  LEN <- length(histology)
-
-  # Check formats of the input data
-  if (is.character(site)) {
-    # Don't force valid ICD-O-3 site codes
-    site <- site_convert(site, validate = FALSE)
-  }
-
-  # Use matrix multiplication to find the intersection of the search results
-  results <- t(
-    search_lookup(lookup_table[["hist"]], histology) *
-      search_lookup(lookup_table[["site"]], site) *
-      search_lookup(lookup_table[["behav"]], behaviour)
-  )
-
-  # Find position in the lookup table index
-  positions <- find_match_index(results, LEN)
-
-  # Check for errors and print them to the console
-  error_none <- determine_errors(positions, "none")
-  error_mult <- determine_errors(positions, "mult")
-
-  # Print messages to the console if verbose is set to TRUE
-  if (verbose) {
-    if (!is.null(error_none)) {
-      message("No match found at index: ", paste(error_none, collapse = ", "), "\n")
-    }
-    if (!is.null(error_mult)) {
-      message(
-        "Duplicate matches found at index: ",
-        paste(error_mult, collapse = ", "),
-        "\n"
-      )
-    }
-  }
-
-  # Get the diagnostic levels from the lookup table based on the depth specified
-  if (depth == 99) {
-    type <- lookup_table$seer_grp[positions]
-  } else {
-    type <- lookup_table[[paste0("pos_", depth)]][positions]
-  }
-
-  return(type)
+  # Use the internal classification function
+  return(classify_internal(histology, site, behaviour, lookup_table, depth, verbose))
 }

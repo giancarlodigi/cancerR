@@ -14,7 +14,7 @@ have valid ICD-O-3 sites codes between C00.0 and C97.0, setting any invalid
 codes to \code{NA}. Default value is \code{TRUE}.}
 }
 \value{
-Returns a converted ICD-O-3 topography code in a numeric format.
+Returns a converted ICD-O-3 topography code in an integer format.
 }
 \description{
 Converts ICD-O-3 topography codes in to a numeric format.

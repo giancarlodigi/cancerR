@@ -21,6 +21,7 @@ WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.o
 <!-- badges: end -->
 
 <p align="left">
+
 • <a href="#overview">Overview</a><br> •
 <a href="#features">Features</a><br> •
 <a href="#installation">Installation</a><br> •
@@ -111,8 +112,8 @@ following features:
 
 Please cite `cancerR` as:
 
-> Di Giuseppe Giancarlo (2024) cancerR: An R package to classify cancer
-> using administrative data. R package version 0.1.0.
+> Di Giuseppe Giancarlo (2026) cancerR: An R package to classify cancer
+> using administrative data. R package version 0.1.1.
 > <https://github.com/giancarlodigi/cancerR/>
 
 ## Contributing
